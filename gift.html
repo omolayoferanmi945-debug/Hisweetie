@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift</title>
+<style>
+body { margin:0; font-family:'Segoe UI',sans-serif; background:black; color:white; text-align:center; }
+section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:20px; }
+button { padding:12px 25px; background:white; color:black; border:none; margin-top:20px; border-radius:8px; cursor:pointer; }
+h2 { letter-spacing:2px; }
+#kiss { margin-top:20px; display:none; font-size:2em; }
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="https://raw.githubusercontent.com/omolayoferanmi945-debug/Hisweetie/main/soft_love_song.mp3" type="audio/mpeg">
+</audio>
+<script>document.getElementById("bgMusic").volume=0.2;</script>
+
+<section>
+<h2>And lest I forget... 🎁</h2>
+<button onclick="showKiss()">I'm right here</button>
+<div id="kiss">
+💋💋💋<p>I love my sweet boy ❤️</p>
+</div>
+</section>
+
+<script>
+function showKiss(){
+ document.getElementById("kiss").style.display="block";
+}
+</script>
+</body>
+  </html>
