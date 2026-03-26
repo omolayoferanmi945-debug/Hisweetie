@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message</title>
+<style>
+body { margin:0; font-family:'Segoe UI',sans-serif; background:black; color:white; text-align:center; }
+section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:20px; }
+button { padding:12px 25px; background:white; color:black; border:none; margin-top:20px; border-radius:8px; cursor:pointer; }
+#typed { max-width:600px; line-height:1.6; margin-top:20px; }
+h1,h2 { letter-spacing:2px; }
+</style>
+</head>
+<body>
+<section>
+<h2>My Message ❤️</h2>
+<p id="typed"></p>
+<audio id="voiceNote">
+<source src="https://raw.githubusercontent.com/omolayoferanmi945-debug/Hisweetie/main/birthday_vn.mp3" type="audio/mpeg">
+</audio>
+<a href="romantic2.html"><button>Next</button></a>
+</section>
+
+<script>
+const text = `I never knew I would fall in love with you this hard, but I do hope you notice that I love you so much even though it’s mostly on screen. I appreciate the fact that you once gave me most of your time and energy. You made me feel important, even though we argue, fight, and sometimes ignore each other… but it’s all good. Thank you for making me see the better side of you. Today is all about you and your magic of making everything better when you’re in the room. This is a new chapter of your life, a new section of greatness, and I hope I am in it. I hope our bond grows more than peptide bonds. I love your courage and the way you challenge yourself to be better. You’ve really come a long way to be 30, cheers to greatness. I wish I were right there to give you a big hug, but just imagine I’m squeezing you right now. I know you might not have taken some of my words seriously, but it’s your birthday and I really meant everything I have ever told you.`;
+
+let i=0;
+function typeWriter(){
+ if(i<text.length){
+  document.getElementById("typed").innerHTML += text.charAt(i);
+  i++;
+  setTimeout(typeWriter,30);
+  if(i===250){ document.getElementById("voiceNote").play().catch(()=>{}); }
+ }
+}
+typeWriter();
+</script>
+</body>
+</html>
