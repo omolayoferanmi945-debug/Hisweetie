@@ -7,7 +7,7 @@
 <style>
 body {
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family:'Segoe UI', sans-serif;
   background:black;
   color:white;
   text-align:center;
@@ -29,10 +29,19 @@ button {
   border-radius:8px;
   cursor:pointer;
 }
-h1, h2 { letter-spacing:2px; }
+h1,h2 { letter-spacing:2px; }
 </style>
 </head>
 <body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="https://raw.githubusercontent.com/omolayoferanmi945-debug/Hisweetie/main/soft_love_song.mp3" type="audio/mpeg">
+</audio>
+<script>
+let bg = document.getElementById("bgMusic");
+bg.volume = 0.2;
+</script>
+
 <section>
 <h1>Welcome to 30 🎉</h1>
 <p>A new chapter. A new level of greatness.</p>
